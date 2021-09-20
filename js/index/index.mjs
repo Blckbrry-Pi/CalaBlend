@@ -27,7 +27,7 @@ function generatePlayLink (phonemeGroupObjects, backgroundElements) {
 const loadAndDisplayPhonemes = async () => {
     let jsonResponse = await fetch("../../data/phoneme_groups.json");
     let parsedJson = JSON.parse(await jsonResponse.text());
-    let phonemeGroupObjects = phonemeGroupsParse(parsedJson, true);
+    let phonemeGroupObjects = phonemeGroupsParse(parsedJson, true, true);
     
     
     let phonemeGroupTable = document.getElementById("phoneme_group_table");

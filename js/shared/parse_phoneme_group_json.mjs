@@ -23,6 +23,6 @@ class PhonemeGroup {
     }
 }
 
-export default function(parsedJSON, generateHtmlElements) {
-    return Object.entries(parsedJSON).map((entry) => new PhonemeGroup(entry[0], entry[1], generateHtmlElements));
+export default function(parsedJSON, generateHtmlElements, filterOutNoShow) {
+    return Object.entries(parsedJSON).filter((entry) => !(entry[1].noShowSinglePhoneme && filterOutNoShow)).map((entry) => new PhonemeGroup(entry[0], entry[1], generateHtmlElements));
 }

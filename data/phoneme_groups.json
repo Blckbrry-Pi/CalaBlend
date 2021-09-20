@@ -25,6 +25,7 @@
             "m",
             "n",
             "p",
+            "qu",
             "r",
             "s",
             "t",
@@ -36,6 +37,22 @@
         ]
     },
 
+    "singConsEnd": {
+        "name": "Single Consonant Endings",
+        "phonemes": [
+            "b",
+            "d",
+            "g",
+            "k",
+            "m",
+            "n",
+            "p",
+            "t",
+            "v",
+            "x"
+        ],
+        "noShowSinglePhoneme": true
+    },
 
     "digraph": {
         "name": "Digraphs",
@@ -187,6 +204,20 @@
             "ow",
             "ou",
             "igh"
+        ]
+    },
+
+    "leEndBlend": {
+        "name": "_le End Blends",
+        "phonemes": [
+            "ble",
+            "dle",
+            "fle",
+            "gle",
+            "kle",
+            "ple",
+            "tle",
+            "zle"
         ]
     }
 }

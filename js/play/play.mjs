@@ -53,7 +53,7 @@ const changePhoneme = (possiblePhonemes) => {
     /**
      * @type PhonemeGroup[]
      */
-    let phonemeGroupObjects = phonemeGroupsParse(parsedJson, false);
+    let phonemeGroupObjects = phonemeGroupsParse(parsedJson, false, false);
     
     
     let possiblePhonemes = [...new Set(
