@@ -54,7 +54,9 @@ const changePhoneme = (possiblePhonemes) => {
 (async () => {
     let urlParams = new URLSearchParams(window.location.search)
     let checked = urlParams.get("checked").split(" ");
+    
     let backgrounds = urlParams.get("backgrounds").split(" ");
+    handleBackgroundImages(backgrounds);
     
     let jsonResponse = await fetch("../../data/phoneme_groups.json");
     let parsedJson = JSON.parse(await jsonResponse.text());
@@ -74,7 +76,6 @@ const changePhoneme = (possiblePhonemes) => {
     console.log(possiblePhonemes);
 
     changePhoneme(possiblePhonemes);
-    handleBackgroundImages(backgrounds);
 
 
     document.addEventListener("click", (event) => {
