@@ -1,0 +1,192 @@
+{
+    "singVow": {
+        "name": "Single Vowels",
+        "phonemes": [
+            "a",
+            "e",
+            "i",
+            "o",
+            "u"
+        ]
+    },
+
+    "singCons": {
+        "name": "Single Consonants",
+        "phonemes": [
+            "b",
+            "c",
+            "d",
+            "f",
+            "g",
+            "h",
+            "j",
+            "k",
+            "l",
+            "m",
+            "n",
+            "p",
+            "r",
+            "s",
+            "t",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"
+        ]
+    },
+
+
+    "digraph": {
+        "name": "Digraphs",
+        "phonemes": [
+            "ch",
+            "th",
+            "sh",
+            "wh"
+        ]
+    },
+
+
+    "fzsl": {
+        "name": "FZSL",
+        "phonemes": [
+            "ff",
+            "zz",
+            "ss",
+            "ll"
+        ]
+    },
+
+    "lBlend": {
+        "name": "L Blends",
+        "phonemes": [
+            "bl",
+            "sl",
+            "fl",
+            "pl",
+            "cl",
+            "gl"
+        ]
+    },
+
+    "rBlend": {
+        "name": "R Blends",
+        "phonemes": [
+            "dr",
+            "gr",
+            "br",
+            "cr",
+            "fr",
+            "tr",
+            "pr"
+        ]
+    },
+
+    "sBlend": {
+        "name": "S Blends",
+        "phonemes": [
+            "sp",
+            "sn",
+            "sk",
+            "sm",
+            "st",
+            "sw",
+            "sc"
+        ]
+    },
+
+    "sBlend3": {
+        "name": "3-Letter S Blends",
+        "phonemes": [
+            "squ",
+            "spl",
+            "scr",
+            "str",
+            "shr",
+            "spr"
+        ]
+    },
+
+    "endBlend": {
+        "name": "Ending Blends",
+        "phonemes": [
+            "sk",
+            "lt",
+            "st",
+            "nt",
+            "lp",
+            "sp",
+            "mp",
+            "pt",
+            "ft",
+            "lk"
+        ]
+    },
+
+    "extEndBlend": {
+        "name": "Extra Ending Blends",
+        "phonemes": [
+            "nch",
+            "ng",
+            "nk",
+            "ck",
+            "ng"
+        ]
+    },
+
+    "vowUnderE": {
+        "name": "Vowel _ E",
+        "phonemes": [
+            "i_e",
+            "o_e",
+            "u_e",
+            "a_e",
+            "e_e"
+        ]
+    },
+
+    "vowTeam1": {
+        "name": "Vowel Teams 1",
+        "phonemes": [
+            "ea",
+            "oa",
+            "ai"
+        ]
+    },
+
+    "vowTeam2": {
+        "name": "Vowel Teams 2",
+        "phonemes": [
+            "ee",
+            "ay",
+            "oe"
+        ]
+    },
+
+    "rContVow1": {
+        "name": "R-Controlled Vowels 1",
+        "phonemes": [
+            "ar",
+            "or"
+        ]
+    },
+
+    "rContVow2": {
+        "name": "R-Controlled Vowels 2",
+        "phonemes": [
+            "er",
+            "ir",
+            "ur"
+        ]
+    },
+
+    "vowTeam3": {
+        "name": "Vowel Teams 3",
+        "phonemes": [
+            "ow",
+            "ou",
+            "igh"
+        ]
+    }
+}
