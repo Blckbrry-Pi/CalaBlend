@@ -12,16 +12,19 @@ const getRandomOfArray = (array) => {
 const loadedImagesArray = [];
 let currCount = 0;
 let currBackground;
-const handleBackgroundImages = () => initBackgroundImages((result) => loadedImagesArray.push(result.fileName));
+const handleBackgroundImages = (backgroundsToUse) => initBackgroundImages((result) => (!backgroundsToUse || backgroundsToUse.includes(result.fileName)) && loadedImagesArray.push(result.fileName));
 const possBackgChange = () => {
     if (loadedImagesArray.length > 0) {
         if (currCount === 0) {
             let backgroundContainer = document.getElementById("phonemeDivContainer");
 
             let newBackground;
+            let timesTried = 0;
             while (true) {
                 newBackground = getRandomOfArray(loadedImagesArray);
                 if (currBackground !== newBackground) break;
+                if (timesTried === 100) break;
+                timesTried++;
             }
 
             currBackground = newBackground;
@@ -37,7 +40,11 @@ const changePhoneme = (possiblePhonemes) => {
 
     let newPhoneme;
 
-    while ((newPhoneme = getRandomOfArray(possiblePhonemes)) === phonemeDiv.innerHTML);
+    let timesTried = 0;
+    while ((newPhoneme = getRandomOfArray(possiblePhonemes)) === phonemeDiv.innerHTML) {
+        if (timesTried === 100) break;
+        timesTried++;
+    }
 
     phonemeDiv.innerHTML = newPhoneme;
 
@@ -45,8 +52,9 @@ const changePhoneme = (possiblePhonemes) => {
 };
 
 (async () => {
-    let checked = new URLSearchParams(window.location.search).get("checked").split(" ");
-    console.log(new URLSearchParams(window.location.search).get("checked"));
+    let urlParams = new URLSearchParams(window.location.search)
+    let checked = urlParams.get("checked").split(" ");
+    let backgrounds = urlParams.get("backgrounds").split(" ");
     
     let jsonResponse = await fetch("../../data/phoneme_groups.json");
     let parsedJson = JSON.parse(await jsonResponse.text());
@@ -66,7 +74,7 @@ const changePhoneme = (possiblePhonemes) => {
     console.log(possiblePhonemes);
 
     changePhoneme(possiblePhonemes);
-    handleBackgroundImages();
+    handleBackgroundImages(backgrounds);
 
 
     document.addEventListener("click", (event) => {
