@@ -18,14 +18,14 @@ function generatePlayLink (phonemeGroupObjects, backgroundElements) {
             .map((data) => data.name)
             .join(" ")
     );
-    let playLink = `./play?checked=${checkedQuery}&backgrounds=${backgroundQuery}`;
+    let playLink = `../play/singlePhoneme?checked=${checkedQuery}&backgrounds=${backgroundQuery}`;
     console.log(playLink);
     return playLink;
 }
 
 
 const loadAndDisplayPhonemes = async () => {
-    let jsonResponse = await fetch("../../data/phoneme_groups.json");
+    let jsonResponse = await fetch("../../../data/phoneme_groups.json");
     let parsedJson = JSON.parse(await jsonResponse.text());
     let phonemeGroupObjects = phonemeGroupsParse(parsedJson, true, true);
     

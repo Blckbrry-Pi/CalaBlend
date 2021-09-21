@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Sriracha';
-    src: URL('/data/Sriracha-Regular.ttf') format('truetype');
+    src: URL('../data/Sriracha-Regular.ttf') format('truetype');
 }
 
 body {

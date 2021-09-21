@@ -1,6 +1,6 @@
-import phonemeGroupsParse from "../shared/parse_phoneme_group_json.mjs";
+import phonemeGroupsParse from "../../shared/parse_phoneme_group_json.mjs";
 
-import initBackgroundImages from "../shared/load_backgrounds.mjs";
+import initBackgroundImages from "../../shared/load_backgrounds.mjs";
 
 const phonemesPerBackgroundChange = 10;
 
