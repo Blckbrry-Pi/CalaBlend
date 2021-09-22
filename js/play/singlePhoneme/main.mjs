@@ -12,7 +12,7 @@ const getRandomOfArray = (array) => {
 const loadedImagesArray = [];
 let currCount = 0;
 let currBackground;
-const handleBackgroundImages = (backgroundsToUse) => initBackgroundImages((result) => (!backgroundsToUse || backgroundsToUse.includes(result.fileName)) && loadedImagesArray.push(result.fileName));
+const handleBackgroundImages = (backgroundsToUse) => initBackgroundImages((result) => (!backgroundsToUse || backgroundsToUse.includes(result.fileName)) && loadedImagesArray.push(result.fileName), "../data");
 const possBackgChange = () => {
     if (loadedImagesArray.length > 0) {
         if (currCount === 0) {
@@ -58,7 +58,7 @@ const changePhoneme = (possiblePhonemes) => {
     let backgrounds = urlParams.get("backgrounds").split(" ");
     handleBackgroundImages(backgrounds);
     
-    let jsonResponse = await fetch("../../data/phoneme_groups.json");
+    let jsonResponse = await fetch("../data/phoneme_groups.json");
     let parsedJson = JSON.parse(await jsonResponse.text());
     /**
      * @type PhonemeGroup[]
